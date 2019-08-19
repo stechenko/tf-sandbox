@@ -14,3 +14,9 @@ provider "aws" {
   access_key = var.ec2_access_key
   secret_key = var.ec2_secret_key
 }
+
+
+resource "aws_instance" "instance1" {
+  ami = var.ec2_image_id
+  instance_type = var.ec2_instance_type
+}
