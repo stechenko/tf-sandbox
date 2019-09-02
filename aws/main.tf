@@ -9,7 +9,8 @@ resource "random_id" "server" {
 }
 
 
-resource "aws_instance" "oleg-tf-${random_id.server.hex}" {
+resource "aws_instance" "oleg-tf" {
+  name = random_id.server.hex
   ami = var.image_id
   instance_type = var.instance_type
   subnet_id = var.subnet_id
