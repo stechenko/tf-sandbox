@@ -10,7 +10,7 @@ variable "image_id" {
 
 variable "instance_type" {
   type = string
-  default = "t1.small"
+  default = "t2.small"
 }
 
 variable "subnet_id" {
