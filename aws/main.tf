@@ -4,14 +4,10 @@ provider "aws" {
   secret_key = "${var.scalr_aws_secret_key}"
 }
 
-resource "random_id" "server" {
-  byte_length = 4
-}
 
 
 resource "aws_instance" "oleg-tf" {
-  name = random_id.server.hex
-  ami = var.image_id
-  instance_type = var.instance_type
-  subnet_id = var.subnet_id
+  ami = "${var.image_id}"
+  instance_type = "${var.instance_type}"
+  subnet_id = "${var.subnet_id}"
 }
