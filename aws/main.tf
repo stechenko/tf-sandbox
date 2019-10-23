@@ -14,7 +14,7 @@ resource "aws_instance" "oleg-tf" {
   subnet_id = var.subnet_id
 
   tags = {
-    Name = "oleg${random_id.server_id.hex}"
+    Name = "oleg-${random_id.server_id.hex}"
     owner = "oleg"
   }
 }
