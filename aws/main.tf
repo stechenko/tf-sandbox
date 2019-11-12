@@ -15,6 +15,6 @@ resource "aws_instance" "oleg-tf" {
 
   tags = {
 #    Name = "oleg-${random_id.server_id.hex}"
-    blah = "sdfsdfsd"
+    blah1 = "sdfsdfsd"
   }
 }
