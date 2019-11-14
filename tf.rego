@@ -1,6 +1,6 @@
 package terraform
 
-import input.tfplan as tfplan
+import input as tfplan
 
 allowed_platforms = ["aws", "azure", "gce"]
 deny_platforms = ["gce", "openstack", "vmware"]
@@ -15,7 +15,8 @@ allowed_instance_types = {
 
 res := tfplan.resource_changes
 
-resources := [r | r = res[_]; allowed_platforms[_] == r.provider_name]
+allowed_resources := [r | r = res[_]; allowed_platforms[_] == r.provider_name]
+resources := [r | r = allowed_resources[_]; not "delete" == r.change.actions[0]]
 
 
 contains(arr, elem) {
@@ -28,7 +29,7 @@ deny[msg] {
     r = res[_]
     instance_types = allowed_instance_types[r.provider_name]
     not contains(instance_types, r.change.after.instance_type)
-    msg := sprintf("Instance type '%s' not allowed on cloud '%s'", 
+    msg := sprintf("Instance type '%s' is not allowed on cloud '%s'", 
                     [r.change.after.instance_type, r.provider_name])
 }
 
@@ -36,7 +37,7 @@ deny[msg] {
 deny[msg] {
     r = res[_]
     deny_platforms[_] == r.provider_name
-    msg := sprintf("Provider %s not allowed", [r.provider_name])
+    msg := sprintf("Provider %s is not allowed", [r.provider_name])
 }
 
 
