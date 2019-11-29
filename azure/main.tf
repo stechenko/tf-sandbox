@@ -1,3 +1,13 @@
+//terraform {
+//  backend "remote" {
+//    hostname = ""
+//    organization = "org-sgpvfvrkj5ao2j0"
+//    workspaces {
+//      name = "olegazure"
+//    }
+//  }
+//}
+
 provider "azurerm" {
   client_id = var.scalr_azurerm_client_id
   client_secret = var.scalr_azurerm_client_secret
@@ -12,6 +22,9 @@ resource "azurerm_virtual_machine" "oleg1" {
   network_interface_ids = ["revizor"]
   resource_group_name = "revizor"
   vm_size = "Basic_A0"
+  tags = {
+    owner = "oleg"
+  }
 
   storage_os_disk {
     create_option = "FromImage"
