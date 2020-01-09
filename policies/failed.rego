@@ -2,9 +2,11 @@ package terraform
 
 import input.tfplan as tfplan
 
+a := [0, 1]
+b := 10
 
-# Check only allowed clouds
 deny[msg] {
-    1 > 0
+    c = a[_]
+    c > b
     msg := sprintf("Fail policy")
 }
