@@ -16,4 +16,5 @@ resource "aws_instance" "oleg-tf" {
 #      Name = "oleg-${random_id.server_id.hex}"
       owner = "oleg"
   }
+
 }
