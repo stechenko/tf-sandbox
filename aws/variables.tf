@@ -15,12 +15,6 @@ variable "instance_type" {
 
 variable "subnet_id" {
   type = string
+  default = "subnet-3d82d101"
 }
 
-variable "scalr_aws_access_key" {
-  description = "AWS Access Key (sensitive)"
-}
-
-variable "scalr_aws_secret_key" {
-  description = "AWS Secret Key (sensitive)"
-}
