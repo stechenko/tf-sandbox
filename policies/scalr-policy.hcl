@@ -14,4 +14,5 @@ policy "tags" {
 
 policy "error" {
     enabled = true
+    enforcement_level = "soft-mandatory"
 }
