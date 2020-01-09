@@ -12,8 +12,12 @@ policy "tags" {
     enabled = true
 }
 
-policy "error" {
+policy "syntax-error" {
     enabled = true
     enforcement_level = "soft-mandatory"
 }
 
+policy "failed" {
+    enabled = true
+    enforcement_level = "soft-mandatory"
+}
