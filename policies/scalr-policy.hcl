@@ -24,7 +24,7 @@ policy "failed" {
 
 policy "failed-advisory" {
     enabled = true
-    enforcement_level = "advisory"
+    enforcement_level = "soft-mandatory"
 }
 
 policy "pass-policy1" {
