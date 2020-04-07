@@ -28,7 +28,7 @@ policy "failed-advisory" {
 }
 
 policy "pass-policy1" {
-    enabled = true
+    enabled = false
     enforcement_level = "advisory"
 }
 
