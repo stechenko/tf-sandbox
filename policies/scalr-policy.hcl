@@ -18,7 +18,7 @@ policy "syntax-error" {
 }
 
 policy "failed" {
-    enabled = true
+    enabled = false
     enforcement_level = "hard-mandatory"
 }
 
