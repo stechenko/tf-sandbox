@@ -13,7 +13,7 @@ policy "tags" {
 }
 
 policy "syntax-error" {
-    enabled = true
+    enabled = false
     enforcement_level = "soft-mandatory"
 }
 
