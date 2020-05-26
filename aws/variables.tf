@@ -18,3 +18,7 @@ variable "subnet_id" {
   default = "subnet-3d82d101"
 }
 
+variable "blank" {
+  description = "Blank string"
+  default = ""
+}
