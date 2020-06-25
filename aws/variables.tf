@@ -1,6 +1,5 @@
 variable "region" {
   type = string
-  default = "us-east-1"
 }
 
 variable "image_id" {
@@ -10,7 +9,6 @@ variable "image_id" {
 
 variable "instance_type" {
   type = string
-  default = "t2.nano"
 }
 
 variable "subnet_id" {
