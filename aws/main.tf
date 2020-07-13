@@ -15,5 +15,3 @@ resource "aws_instance" "oleg-tf-bump" {
       owner = "oleg"
   }
 }
-
-
