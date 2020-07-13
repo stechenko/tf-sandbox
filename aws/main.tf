@@ -15,4 +15,3 @@ resource "aws_instance" "oleg-tf" {
       owner = "oleg"
   }
 }
-
