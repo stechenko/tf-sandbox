@@ -1,4 +1,6 @@
 provider "scalr" {
+  hostname = "a4e1f352b5cb.test-env.scalr.com"
+  token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhdC1zdnJka2tqYTFncWwwOW8iLCJpc3MiOiJ1c2VyIn0.p2LHA_d7t93et1XuNI18R5eieq_NRrjYbUfNIRfcYL0"
 }
 
 resource "scalr_workspace" "testws1" {
