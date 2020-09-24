@@ -1,9 +1,9 @@
 terraform {
   backend "remote" {
-    hostname = "bcf5006bcd45.test-env.scalr.com"
+    hostname = "b21b64916ba4.test-env.scalr.com"
     organization = "env-svrcnchebt61e30"
     workspaces {
-      name = "test"
+      name = "no-vcs"
     }
   }
 }
