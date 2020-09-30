@@ -1,5 +1,10 @@
-module "test" {
-  source = "c3f98e16ce20.test-env.scalr.com/acc-stp1ike7sar519o/test/gigimon"
-  version = "0.1.1"
-  blank_string = var.blank
+module "rds" {
+  source = "blah-123.igrkio.scalr.net/env-t447igcav4qofvo/rds/aws"
+  version = "2.5.0"
+
+  # Set 11 required variables below.
+
+  # The allocated storage in gigabytes
+  allocated_storage = "ebs"
+
 }
