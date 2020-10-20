@@ -24,7 +24,7 @@ resource "random_string" "r" {
 }
 
 resource "scalr_endpoint" "url1" {
-  name = "endpoint1"
+  name = "endpoint2"
   secret_key = random_string.r.result
   timeout = 15
   max_attempts = 4
