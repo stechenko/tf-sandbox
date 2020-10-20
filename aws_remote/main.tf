@@ -1,9 +1,9 @@
 terraform {
   backend "remote" {
-    hostname = "b21b64916ba4.test-env.scalr.com"
+    hostname = "4d78f24a54c9.test-env.scalr.com"
     organization = "env-svrcnchebt61e30"
     workspaces {
-      name = "no-vcs"
+      name = "testremote"
     }
   }
 }
@@ -15,6 +15,9 @@ provider "aws" {
 resource "random_id" "server_id" {
   byte_length = 4
 }
+
+
+
 
 resource "aws_instance" "oleg-tf" {
   ami = var.image_id

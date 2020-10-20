@@ -1,5 +1,16 @@
+terraform {
+  backend "remote" {
+    hostname = "4d78f24a54c9.test-env.scalr.com"
+    token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhdC1zdnN1ZTEzaTdudnNhcG8iLCJpc3MiOiJ1c2VyIn0.PEnF4h-eaXlQmjOE8MWsS098b3KwcB7KU6wDKTnfn2I"
+    organization = "env-svrcnchebt61e30"
+    workspaces {
+      name = "testremote"
+    }
+  }
+}
+
 provider "scalr" {
-  hostname = "a4e1f352b5cb.test-env.scalr.com"
+  hostname = "4d78f24a54c9.test-env.scalr.com"
   token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJhdC1zdnJka2tqYTFncWwwOW8iLCJpc3MiOiJ1c2VyIn0.p2LHA_d7t93et1XuNI18R5eieq_NRrjYbUfNIRfcYL0"
 }
 
@@ -30,3 +41,15 @@ resource "scalr_webhook" "hook1" {
   workspace_id = scalr_workspace.testws1.id
   environment_id = "env-svrcnchebt61e30"
 }
+
+data scalr_current_run testrun {
+}
+
+output "run_id" {
+    value = scalr_current_run.testrun.id
+}
+
+output "vcs" {
+    value = scalr_current_run.testrun.vcs
+}
+
