@@ -33,7 +33,7 @@ resource "scalr_endpoint" "url1" {
 }
 resource "scalr_webhook" "hook1" {
   enabled = true
-  name = "wh1"
+  name = "wh2"
   events = [
     "run:completed",
     "run:needs_attention"]
