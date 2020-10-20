@@ -42,7 +42,7 @@ resource "scalr_webhook" "hook1" {
   environment_id = "env-svrcnchebt61e30"
 }
 
-data scalr_current_run testrun {
+data "scalr_current_run" "testrun" {
 }
 
 output "run_id" {
