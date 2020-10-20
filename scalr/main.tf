@@ -46,10 +46,10 @@ data "scalr_current_run" "testrun" {
 }
 
 output "run_id" {
-    value = scalr_current_run.testrun.id
+    value = data.scalr_current_run.testrun.id
 }
 
 output "vcs" {
-    value = scalr_current_run.testrun.vcs
+    value = data.scalr_current_run.testrun.vcs
 }
 
