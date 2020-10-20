@@ -53,3 +53,19 @@ output "vcs" {
     value = data.scalr_current_run.testrun.vcs
 }
 
+output "env_id" {
+    value = data.scalr_current_run.testrun.environment_id
+}
+
+output "ws_name" {
+    value = data.scalr_current_run.testrun.workspace_name
+}
+
+output "is_destroy" {
+    value = data.scalr_current_run.testrun.is_destroy
+}
+
+output "message" {
+    value = data.scalr_current_run.testrun.message
+}
+
