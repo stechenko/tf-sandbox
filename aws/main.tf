@@ -15,3 +15,7 @@ resource "aws_instance" "oleg-tf-bump" {
       owner = "oleg"
   }
 }
+
+output "instance_id" {
+  value = aws_instance.oleg-tf-bump.id
+ }
